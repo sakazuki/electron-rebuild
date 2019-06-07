@@ -54,7 +54,7 @@ const locateBinary = async (basePath: string, suffix: string) => {
 };
 
 const locateNodeGyp = async () => {
-  return await locateBinary(__dirname, `node_modules/.bin/node-gyp${process.platform === 'win32' ? '.cmd' : ''}`);
+  return await locateBinary(__dirname, `node_modules/npm/bin/node-gyp-bin/node-gyp${process.platform === 'win32' ? '.cmd' : ''}`);
 };
 
 const locatePrebuild = async (modulePath: string) => {
